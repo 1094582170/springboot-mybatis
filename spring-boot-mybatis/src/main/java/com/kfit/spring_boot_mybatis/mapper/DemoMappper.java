@@ -7,6 +7,9 @@ import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
 import com.kfit.spring_boot_mybatis.pojo.db.Demo;
+import com.kfit.spring_boot_mybatis.pojo.db.GLiveInfo;
+
+import tk.mybatis.mapper.util.Sqls;
 
 public interface DemoMappper {
 	
@@ -28,5 +31,7 @@ public interface DemoMappper {
 	@Insert("insert into t(name) values(#{name})")
 	@Options(useGeneratedKeys=true,keyProperty="id",keyColumn="id")
 	public void save(Demo demo);
+	
+	
 	
 }
