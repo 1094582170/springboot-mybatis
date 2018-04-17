@@ -42,5 +42,7 @@ public class CodeResult {
 	 * 远程服务不可用的标识 10
 	 */
 	public static final Integer REMOTE_INVOCATION_ERROR = 20;
+	
+	//
 
 }
