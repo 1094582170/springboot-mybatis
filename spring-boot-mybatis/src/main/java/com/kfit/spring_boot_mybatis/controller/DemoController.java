@@ -44,6 +44,7 @@ public class DemoController {
 		 * 第二个参数：每页获取的条数.
 		 */
 		logger.info("live");
+		logger.error("live");
 		PageHelper.startPage(1, 10);
 		List<GLiveInfo> list = liveInfoMapper.selectAll();
 		return list;

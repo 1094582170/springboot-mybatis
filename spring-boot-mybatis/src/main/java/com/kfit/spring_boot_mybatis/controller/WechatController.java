@@ -101,13 +101,15 @@ public class WechatController {
 		 String openid = json.getString("openid");
 		 String accessToken = json.getString("access_token");
 		 getWxUser(openid,accessToken);
+		 Map<String,String> map2 = new HashMap<String,String>();
+		 map2.put("openid", openid);
 		try {
 			// send(openid);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return new JSONResult(CodeResult.CODE_SUCCESS, MsgResult.ACCESSOK, "成功");
+		return new JSONResult(CodeResult.CODE_SUCCESS, MsgResult.ACCESSOK, map2);
 	}
 
 	public static JSONResult send(String openid) throws Exception {
